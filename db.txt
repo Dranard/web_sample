@@ -1,0 +1,100 @@
+admins
+	-  id(pk)
+	- name
+	- email
+	- password
+	- phone
+	- address
+	- status
+		- Active
+		- Inactive
+	- type
+		- admin
+		- staff
+	- created_at
+	- updated_at
+
+users
+	-  id(pk)
+	- name
+	- email
+	- password
+	- phone
+	- address
+	- status
+		- Active
+		- Inactive
+	- created_at
+	- updated_at
+
+categories
+	- id(pk)
+	- name
+	- slug (uniq)
+	- status
+		- Active
+		- Inactive
+	- created_at
+	- updated_at
+
+brands
+	- id(pk)
+	- name
+	- slug (uniq)
+	- status
+		- Active
+		- Inactive
+	- created_at
+	- updated_at
+
+products
+	- id(pk)
+	- name
+	- slug (uniq)
+	- description
+	- summary
+	- stock (qty)
+	- price
+	- discounted_price (opt)
+	- images
+	- category_id (fk)
+	- brand_id (fk)
+	- status
+		- Active
+		- Inactive
+	- created_at
+	- updated_at
+
+reviews
+	- id(pk)
+	- user_id  (fk)
+	- product_id (fk)
+	- comment
+	- rating
+	- created_at
+	- updated_at
+
+
+orders
+	- id(pk)
+	- user_id (fk)
+	- status
+		- Processing
+		- Confirmed
+		- Shipping
+		- Delivered
+		- Cancelled
+	- created_at
+	- updated_at
+
+
+order_details
+	- id(pk)
+	- order_id (fk)
+	- product_id (fk)
+	- qty
+	- price
+	- total
+	- created_at
+	- updated_at
+
